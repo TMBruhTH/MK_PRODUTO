@@ -19,6 +19,25 @@ namespace Repository.Repository
             _logger = logger;
         }
 
+        #region "Categorias"
+
+        public async Task<ActionResult<IEnumerable<Categoria>>> BuscaCategorias()
+        {
+            List<Categoria> categorias = new List<Categoria>();
+            try
+            {
+                categorias = await _produtoContext.Categoria.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex.ToString()); ;
+            }
+            return categorias;
+        }
+
+        #endregion
+
+        #region "Produtos"
         public async Task<ActionResult<IEnumerable<Produto>>> BuscaProdutos()
         {
             List<Produto> produto = new List<Produto>();
@@ -107,5 +126,6 @@ namespace Repository.Repository
 
             return model;
         }
+        #endregion
     }
 }

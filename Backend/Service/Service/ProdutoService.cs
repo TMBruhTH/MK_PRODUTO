@@ -20,6 +20,17 @@ namespace Service.Service
             _produtoRepository = produtoRepository;
         }
 
+        #region "Categorias"
+
+        public Task<ActionResult<IEnumerable<Categoria>>> BuscaCategorias()
+        {
+            return _produtoRepository.BuscaCategorias();
+        }
+
+        #endregion
+
+        #region "Produtos"
+
         Task<ActionResult<IEnumerable<Produto>>> IProdutoService.BuscaProdutos()
         {
             return _produtoRepository.BuscaProdutos();
@@ -39,5 +50,7 @@ namespace Service.Service
         {
             return _produtoRepository.SalvarProduto(model);
         }
+
+        #endregion
     }
 }

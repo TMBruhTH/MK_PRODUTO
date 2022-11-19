@@ -18,6 +18,7 @@ namespace ProdutoAPI.Controllers
             _produtoService = produtoService;
             _mapper = mapper;
         }
+        #region "Produtos"
         
         [HttpGet]
         [Route("BuscaProdutos")]
@@ -48,5 +49,16 @@ namespace ProdutoAPI.Controllers
         {
             return _produtoService.DeletarProduto(id);
         }
+
+        #endregion
+
+        #region "Categorias"
+        [HttpGet]
+        [Route("BuscaCategorias")]
+        public Task<ActionResult<IEnumerable<Categoria>>> BuscaCategorias()
+        {
+            return _produtoService.BuscaCategorias();
+        }
+        #endregion
     }
 }

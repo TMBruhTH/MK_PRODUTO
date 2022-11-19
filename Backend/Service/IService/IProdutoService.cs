@@ -9,5 +9,7 @@ namespace Service.IService
         Task<ActionResult<IEnumerable<Produto>>> FiltroProduto(string desc);
         Task<ActionResult<Produto>> SalvarProduto(Produto model);
         Task<ActionResult<bool>> DeletarProduto(int id);
+
+        Task<ActionResult<IEnumerable<Categoria>>> BuscaCategorias();
     }
 }
