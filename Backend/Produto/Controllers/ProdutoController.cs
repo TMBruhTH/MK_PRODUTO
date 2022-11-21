@@ -3,12 +3,11 @@ using DataModel.Models;
 using DataModel.ModelView;
 using Microsoft.AspNetCore.Mvc;
 using Service.IService;
-using Service.Service;
 
 namespace ProdutoAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProdutoController : ControllerBase
     {
         private readonly IProdutoService _produtoService;
@@ -21,15 +20,8 @@ namespace ProdutoAPI.Controllers
         #region "Produtos"
         
         [HttpGet]
-        [Route("BuscaProdutos")]
-        public Task<ActionResult<IEnumerable<Produto>>> BuscaProdutos()
-        {
-            return _produtoService.BuscaProdutos();
-        }
-
-        [HttpGet]
         [Route("FiltroProduto/{desc}")]
-        public Task<ActionResult<IEnumerable<Produto>>> FiltroProduto(string desc)
+        public Task<ActionResult<IEnumerable<ProdutoViewModel>>> FiltroProduto(string? desc)
         {
             return _produtoService.FiltroProduto(desc);
         }

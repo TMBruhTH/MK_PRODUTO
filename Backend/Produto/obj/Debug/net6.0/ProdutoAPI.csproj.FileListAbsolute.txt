@@ -92,6 +92,12 @@ C:\Users\Brunn\OneDrive\Documentos\WK\Produto\Produto\obj\Debug\net6.0\ProdutoAP
 C:\Users\Brunn\OneDrive\Documentos\WK\Produto\Produto\obj\Debug\net6.0\ProdutoAPI.genruntimeconfig.cache
 C:\Users\Brunn\OneDrive\Documentos\WK\Produto\Produto\obj\Debug\net6.0\ref\ProdutoAPI.dll
 C:\Users\Brunn\OneDrive\Documentos\WK\Produto\Produto\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.csproj.AssemblyReference.cache
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.AssemblyInfoInputs.cache
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.AssemblyInfo.cs
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.csproj.CoreCompileInputs.cache
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\bin\Debug\net6.0\appsettings.json
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\bin\Debug\net6.0\ProdutoAPI.exe
@@ -165,13 +171,6 @@ C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\bin\Debug\net6.0\Service.d
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\bin\Debug\net6.0\DataModel.pdb
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\bin\Debug\net6.0\Service.pdb
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\bin\Debug\net6.0\Repository.pdb
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.csproj.AssemblyReference.cache
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.AssemblyInfoInputs.cache
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.AssemblyInfo.cs
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.csproj.CoreCompileInputs.cache
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\ProdutoAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\staticwebassets\msbuild.ProdutoAPI.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\staticwebassets\msbuild.build.ProdutoAPI.props
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Produto\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProdutoAPI.props

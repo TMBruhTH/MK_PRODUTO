@@ -4,6 +4,7 @@ using DataModel.Models;
 using DataModel.ModelView;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyModel;
+using Microsoft.Extensions.Options;
 using Repository.IRepository;
 using Repository.Repository;
 using Service.IService;
@@ -20,6 +21,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ProdutoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
+
+builder.Services.AddCors();
 
 builder.Services.AddTransient<IProdutoService, ProdutoService>();
 builder.Services.AddTransient<IProdutoRepository, ProdutoRepository>();
@@ -41,6 +44,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(options => 
+options.WithOrigins("http://localhost:4200").
+AllowAnyMethod().
+AllowAnyHeader());
 
 app.UseAuthorization();
 

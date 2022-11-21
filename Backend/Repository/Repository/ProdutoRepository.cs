@@ -1,11 +1,10 @@
 ﻿using DataModel.Context;
 using DataModel.Models;
+using DataModel.ModelView;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Repository.IRepository;
-using Microsoft.AspNetCore.Mvc.Core;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
+using Repository.IRepository;
 
 namespace Repository.Repository
 {
@@ -38,20 +37,6 @@ namespace Repository.Repository
         #endregion
 
         #region "Produtos"
-        public async Task<ActionResult<IEnumerable<Produto>>> BuscaProdutos()
-        {
-            List<Produto> produto = new List<Produto>();
-            try
-            {
-                produto = await _produtoContext.Produto.ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogInformation(ex.ToString()); ;
-            }
-            return produto;
-        }
-
         public async Task<ActionResult<bool>> DeletarProduto(int id)
         {
             Produto? produto = null;
@@ -75,21 +60,33 @@ namespace Repository.Repository
             return true;
         }
 
-        public async Task<ActionResult<IEnumerable<Produto>>> FiltroProduto(string desc)
+        public async Task<ActionResult<IEnumerable<ProdutoViewModel>>> FiltroProduto(string? desc)
         {
-            List<Produto>? produto = new List<Produto>();
+            desc = desc == "undefined" ? null : desc;
+
+            List<ProdutoViewModel>? produto = new List<ProdutoViewModel>();
             try
             {
-                produto = (from tb in _produtoContext.Produto
-                          where string.IsNullOrEmpty(desc) || tb.DescProduto.Contains(desc)
-                          select tb).ToList();
+                produto = await (from tb in _produtoContext.Produto
+                              join tbC in _produtoContext.Categoria
+                              on tb.IdCategoria equals tbC.IdCategoria
+                              where string.IsNullOrEmpty(desc) || tb.DescProduto.Contains(desc)
+                              select new ProdutoViewModel()
+                              {
+                                  IdProduto = tb.IdProduto,
+                                  IdCategoria = tbC.IdCategoria,
+                                  DescCategoria = tbC.DescCategoria,
+                                  DescProduto = tb.DescProduto,
+                                  Qtd = tb.Qtd,
+                                  Vlr = tb.Vlr
+                              }).ToListAsync();
             }
             catch (Exception ex)
             {
                 _logger.LogInformation(ex.ToString());
             }
 
-            return await Task.FromResult(produto);
+            return produto;
         }
 
         public async Task<ActionResult<Produto>> SalvarProduto(Produto model)
@@ -115,6 +112,7 @@ namespace Repository.Repository
                 }
                 else
                 {
+                    model.DataInclusao = DateTime.Now;
                     await _produtoContext.Produto.AddAsync(model);
                 }
                 await _produtoContext.SaveChangesAsync();

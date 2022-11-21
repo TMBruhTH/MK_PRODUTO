@@ -15,6 +15,11 @@ C:\Users\Brunn\OneDrive\Documentos\WK\Produto\Service\obj\Debug\net6.0\Service.d
 C:\Users\Brunn\OneDrive\Documentos\WK\Produto\Service\obj\Debug\net6.0\refint\Service.dll
 C:\Users\Brunn\OneDrive\Documentos\WK\Produto\Service\obj\Debug\net6.0\Service.pdb
 C:\Users\Brunn\OneDrive\Documentos\WK\Produto\Service\obj\Debug\net6.0\ref\Service.dll
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.csproj.AssemblyReference.cache
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.AssemblyInfoInputs.cache
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.AssemblyInfo.cs
+C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.csproj.CoreCompileInputs.cache
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\bin\Debug\net6.0\Service.deps.json
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\bin\Debug\net6.0\Service.dll
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\bin\Debug\net6.0\Service.pdb
@@ -22,11 +27,6 @@ C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\bin\Debug\net6.0\DataModel
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\bin\Debug\net6.0\Repository.dll
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\bin\Debug\net6.0\Repository.pdb
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\bin\Debug\net6.0\DataModel.pdb
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.csproj.AssemblyReference.cache
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.AssemblyInfoInputs.cache
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.AssemblyInfo.cs
-C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.csproj.CoreCompileInputs.cache
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.csproj.CopyComplete
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\Service.dll
 C:\Users\Brunn\OneDrive\Documentos\WK\Backend\Service\obj\Debug\net6.0\refint\Service.dll
