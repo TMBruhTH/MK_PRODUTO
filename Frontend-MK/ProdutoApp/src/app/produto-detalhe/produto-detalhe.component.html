@@ -1,0 +1,54 @@
+<div class="jumbotron py-3">
+  <h1 class="display-4 text-center">Detalhes do Produto</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <app-produto-detalhe-form></app-produto-detalhe-form>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>PESQUISE O PRODUTO</label>
+      <input
+        type="text"
+        class="form-control form-control-lg"
+        placeholder="Informe o produto"
+        [(ngModel)]="descProduto"
+      />
+    </div>
+
+    <div class="form-group">
+      <button
+        class="btn btn-info btn-lg btn-block"
+        type="button"
+        (click)="buscaProdutos()"
+      >
+        Pesquisar
+      </button>
+    </div>
+
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>Descrição</th>
+          <th>Quantidade</th>
+          <th>Valor</th>
+          <th>Categoria</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produtos of listaProdutos">
+          <td (click)="popularForm(produtos)">{{ produtos.descProduto }}</td>
+          <td (click)="popularForm(produtos)">{{ produtos.qtd }}</td>
+          <td (click)="popularForm(produtos)">{{ produtos.vlr }}</td>
+          <td (click)="popularForm(produtos)">{{ produtos.descCategoria }}</td>
+          <td>
+            <i class="far fa-trash-alt fa lg text-danger" (click)="deletarProduto(produtos.idProduto)"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
