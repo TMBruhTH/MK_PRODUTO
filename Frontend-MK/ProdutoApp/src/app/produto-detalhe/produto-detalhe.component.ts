@@ -9,11 +9,8 @@ import { ProdutoDetalheService } from '../shared/produto-detalhe.service';
   styles: [],
 })
 export class ProdutoDetalheComponent implements OnInit {
-
   listaProdutos: Array<ProdutoDetalhe>;
   descProduto: string;
-
-  @Input() busca: EventEmitter<any> = new EventEmitter();
 
   constructor(
     protected produtoService: ProdutoDetalheService,
@@ -24,8 +21,7 @@ export class ProdutoDetalheComponent implements OnInit {
     this.buscaProdutos();
   }
 
-  public buscaProdutos() {
-    this.busca.emit();
+  buscaProdutos(): void {
     this.produtoService.FiltroProduto(this.descProduto).subscribe((res) => {
       this.listaProdutos = res as Array<ProdutoDetalhe>;
     });
@@ -39,7 +35,10 @@ export class ProdutoDetalheComponent implements OnInit {
     this.produtoService.deletarProduto(produtoId).subscribe((res) => {
       if (res) {
         this.buscaProdutos();
-        this.toastr.error("Produto excluido com sucesso!", "Exclusão de Produto!");
+        this.toastr.error(
+          'Produto excluido com sucesso!',
+          'Exclusão de Produto!'
+        );
       }
     });
   }

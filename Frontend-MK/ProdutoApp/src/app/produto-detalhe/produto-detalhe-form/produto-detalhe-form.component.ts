@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Categoria } from 'src/app/shared/categoria.model';
@@ -16,7 +16,8 @@ export class ProdutoDetalheFormComponent implements OnInit {
 
   constructor(
     protected produtoService: ProdutoDetalheService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private produtoComponent: ProdutoDetalheComponent
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +29,9 @@ export class ProdutoDetalheFormComponent implements OnInit {
       (res: any) => {
         if (res) {
           this.limparForm(form);
+
+          this.produtoComponent.buscaProdutos();
+
           this.toastr.success(
             'Produto salvo com sucesso!',
             'Registro de Produto'
